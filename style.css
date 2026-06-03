@@ -1,0 +1,82 @@
+:root {
+  --black-width: 1.15%;
+  --black-margin: calc(var(--black-width) / -2);
+}
+
+body {
+  background-color: #8AE6EA;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width :1000px;
+  min-height: 100vh;
+  margin: 0;
+  padding: 20px;
+  box-sizing: border-box;
+  
+}
+.piano-casing {
+  background: linear-gradient(to bottom, #102B28 0%, #071713 100%);
+  padding: 25px 30px 30px 30px;
+  border-radius: 12px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.9);
+  border-top: 1px solid #4a3020;
+  border-bottom: 3px solid #0a0502;
+  width: 90%;
+  height:25dvh;
+  position: relative;
+}
+.felt-strip {
+  height: 12px;
+  background: linear-gradient(to bottom, #00A39D 0%, #00664D 100%);
+  border-radius: 2px;
+  box-shadow:0 3px 5px #00000099;
+  position: relative;
+  z-index: 10;
+  margin-bottom: -2px;
+}
+
+.keyboard {
+  display: flex;
+  height:100%;
+  position: relative;
+  border-radius: 0 0 5px 5px;
+  background: #000000;
+  box-shadow: 0 0 10px 10px #B4B4B41A;
+}
+
+.key {
+  cursor: pointer;
+  position: relative;
+  box-sizing: border-box;
+}
+.key.white {
+  flex: 1 1 0;
+  background: linear-gradient(to bottom, #E9E9E9 0%, #FFFFFF 80%, #F5F5F5 100%);
+  border: 1px solid #37818F;
+  border-top: none;
+  border-radius: 0 0 5px 5px;
+  z-index: 1;
+  box-shadow: 0 3px 5px #0000004D;
+}
+.key.white:active {
+  background: linear-gradient(to bottom, #E9E9E9 0%, #F0F0F0 100%);
+  box-shadow: 0 0 1px #00000080;
+    border :2px solid #8F6A37;
+}
+.key.black {
+  width: var(--black-width);
+  margin: 0 var(--black-margin);
+  height: 62%;
+  background: linear-gradient(to bottom, #2C2C2C 0%, #111111 15%, #000000 100%);
+  z-index: 2;
+  border-radius: 0 0 3px 3px;
+  border: 1px solid #000000;
+  border-top: none;
+  box-shadow:2px 4px 6px #000000B3;
+}
+
+.key.black:active {
+  height: 63%;
+  box-shadow:1px 2px 3px #000000CC;
+}
